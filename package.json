@@ -1,0 +1,38 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Proyecto vulnerables protegidos",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chmvillar/vulnerables-protegidos.git"
+  },
+  "keywords": [
+    "MERN",
+    "Node",
+    "React"
+  ],
+  "author": "Christian Moya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chmvillar/vulnerables-protegidos/issues"
+  },
+  "homepage": "https://github.com/chmvillar/vulnerables-protegidos#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.6.1",
+    "nodemailer": "^6.9.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
