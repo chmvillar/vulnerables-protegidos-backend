@@ -10,18 +10,12 @@ const nuevaPersona = async (req, res) => {
   const persona = new Persona(req.body);
   persona.creador = req.usuario._id;
 
-  const existePersona = await Persona.findOne({ rut });
-
-  if (existePersona) {
-    const error = new Error("Persona ya existe en los registros");
-    return res.status(400).json({ msg: error.message });
-  }
-
   try {
     const personaAlmacenada = await persona.save();
     res.json(personaAlmacenada);
   } catch (error) {
     console.log(error);
+    res.status(500).json({ error: 'Error al crear la persona' });
   }
 };
 
