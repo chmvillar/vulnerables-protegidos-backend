@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose, { mongo } from "mongoose";
 
 const necesidadSchema = mongoose.Schema(
   {
@@ -29,6 +29,10 @@ const necesidadSchema = mongoose.Schema(
     persona: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Persona",
+    },
+    completado: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Usuario"
     },
   },
   {

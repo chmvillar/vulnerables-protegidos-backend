@@ -35,6 +35,43 @@ app.use("/api/necesidades", necesidadRoutes);
 
 const PORT = process.env.PORT || 4000;
 
-app.listen(PORT, () => {
+const servidor = app.listen(PORT, () => {
   console.log(`Servidor: ${PORT}`);
+});
+
+// Socket.io
+import { Server } from "socket.io";
+
+const io = new Server(servidor, {
+  pingTimeout: 60000,
+  cors: {
+    origin: process.env.FRONTEND_URL,
+  },
+});
+
+io.on("connection", (socket) => {
+  // Eventos
+  socket.on("abrir proyecto", (persona) => {
+    socket.join(persona);
+  });
+
+  socket.on("nueva necesidad", (necesidad) => {
+    const persona = necesidad.persona;
+    socket.to(persona).emit("necesidad agregada", necesidad);
+  });
+
+  socket.on("eliminar necesidad", (necesidad) => {
+    const persona = necesidad.persona;
+    socket.to(persona).emit("necesidad eliminada", necesidad);
+  });
+
+  socket.on("actualizar necesidad", (necesidad) => {
+    const persona = necesidad.persona._id
+    socket.to(persona).emit("necesidad actualizada", necesidad)
+  });
+
+  socket.on("cambiar estado", (necesidad) => {
+    const persona = necesidad.persona._id
+    socket.to(persona).emit("nuevo estado", necesidad)
+  })
 });

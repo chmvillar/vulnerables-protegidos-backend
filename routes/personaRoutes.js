@@ -6,6 +6,7 @@ import {
   obtenerPersona,
   editarPersona,
   eliminarPersona,
+  buscarAsistente,
   asignarAsistente,
   eliminarAsistente,
 } from "../controllers/personaController.js";
@@ -22,7 +23,8 @@ router
     .put(checkAuth, editarPersona)
     .delete(checkAuth, eliminarPersona);
 
-router.post("/asignar-asistente/:id", checkAuth, asignarAsistente);
+router.post("/asistentes", checkAuth, buscarAsistente)
+router.post("/asistentes/:id", checkAuth, asignarAsistente);
 router.post("/eliminar-asistente/:id", checkAuth, eliminarAsistente);
 
 export default router;
