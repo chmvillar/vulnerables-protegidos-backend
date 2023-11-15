@@ -14,7 +14,7 @@ export const emailRegistro = async (datos) => {
 
   // Cuerpo del correo
   const info = await transport.sendMail({
-    from: ' "Vulnerables protegidos" <admin@islademaipo.cl> ',
+    from: ' "Vulnerables protegidos" <soporte@islademaipo.cl> ',
     to: email,
     subject: "Confirma tu correo",
     text: "Bienvenido al portal Vulnerables Protegidos",
@@ -44,7 +44,7 @@ export const emailRecuperar = async (datos) => {
 
   // Cuerpo del correo
   const info = await transport.sendMail({
-    from: ' "Vulnerables protegidos" <admin@islademaipo.cl> ',
+    from: ' "Vulnerables protegidos" <soporte@islademaipo.cl> ',
     to: email,
     subject: "Recupera tu cuenta",
     text: "Recuperar contraseña del portal Vulnerables Protegidos",
