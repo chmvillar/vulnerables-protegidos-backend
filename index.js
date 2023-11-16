@@ -14,7 +14,6 @@ dotenv.config();
 conectarDB();
 
 const corsOptions = {
-    } else {
   origin: '*',
   methods: 'GET, POST, PUT, DELETE',
   headers: 'Content-Type',
