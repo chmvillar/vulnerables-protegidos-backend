@@ -21,10 +21,11 @@ const corsOptions = {
     if (whitelist.includes(origin)) {
       callback(null, true);
     } else {
-      callback(new Error("Error de cors"));
+      callback(new Error(`CORS error: El origen '${origin}' no está permitido`));
     }
   },
 };
+
  
 app.use(cors(corsOptions));
 
