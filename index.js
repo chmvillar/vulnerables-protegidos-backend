@@ -13,13 +13,17 @@ dotenv.config();
 
 conectarDB();
 
-const corsOptions = {
-  origin: '*',
-  methods: 'GET, POST, PUT, DELETE',
-  headers: 'Content-Type',
-  credentials: true,
-};
+const whitelist = [process.env.FRONTEND_URL];
 
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (whitelist.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error(`CORS error: El origen '${origin}' no está permitido`));
+    }
+  },
+};
  
 app.use(cors(corsOptions));
 
