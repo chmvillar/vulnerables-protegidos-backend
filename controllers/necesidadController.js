@@ -11,11 +11,6 @@ const agregarNecesidad = async (req, res) => {
     return res.status(404).json({ msg: error.message });
   }
 
-  if (existePersona.creador.toString() !== req.usuario._id.toString()) {
-    const error = new Error("No tienes los permisos necesarios.");
-    return res.status(404).json({ msg: error.message });
-  }
-
   try {
     const necesidadAlmacenada = await Necesidad.create(req.body);
     existePersona.necesidades.push(necesidadAlmacenada._id);
@@ -29,20 +24,26 @@ const agregarNecesidad = async (req, res) => {
 const obtenerNecesidad = async (req, res) => {
   const { id } = req.params;
 
-  const necesidad = await Necesidad.findById(id).populate("persona");
+  try {
+    const necesidad = await Necesidad.findById(id).populate("persona").sort({ fechaMaxima: -1 });
 
-  if (!necesidad) {
-    const error = new Error("Tarea no encontrada");
-    return res.status(404).json({ msg: error.message });
+    if (!necesidad) {
+      const error = new Error("Tarea no encontrada");
+      return res.status(404).json({ msg: error.message });
+    }
+
+    if (necesidad.persona.creador.toString() !== req.usuario._id.toString()) {
+      const error = new Error("Acción no válida");
+      return res.status(404).json({ msg: error.message });
+    }
+
+    res.json(necesidad);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ msg: "Error interno del servidor" });
   }
-
-  if (necesidad.persona.creador.toString() !== req.usuario._id.toString()) {
-    const error = new Error("Acción no válida");
-    return res.status(404).json({ msg: error.message });
-  }
-
-  res.json(necesidad);
 };
+
 
 const actualizarNecesidad = async (req, res) => {
   const { id } = req.params;
@@ -59,10 +60,11 @@ const actualizarNecesidad = async (req, res) => {
     return res.status(404).json({ msg: error.message });
   }
 
-  necesidad.nombre = req.body.nombre || necesidad.nombre;
+  necesidad.tipoNecesidad = req.body.tipoNecesidad || necesidad.tipoNecesidad;
   necesidad.descripcion = req.body.descripcion || necesidad.descripcion;
   necesidad.prioridad = req.body.prioridad || necesidad.prioridad;
   necesidad.fechaMaxima = req.body.fechaMaxima || necesidad.fechaMaxima;
+  necesidad.imagen = req.body.imagen || necesidad.imagen;
 
   try {
     const necesidadAlmacenada = await necesidad.save();

@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "balmy-geography-403714",
+  "private_key_id": "b8a4dbd85250ff9424d868946212ad27dc6d0db4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCh3AXBQK4vvM1q\ncIuQ3wA52ssy/mINHjsVlOUApgD0Dic2m2bU4iP3ucmodE9rBOPZHdEpjr1Y51Gs\nuQxKGy1FcKmVkLO6cURTVctKkwEJaQ62iXzgJn/PsMOCpfxbVfla6JChxz+pmK8G\nqIluF0EEYNCZPQC6Q5fY6ZRrab3h0heT3NXLznaxjqQjFRQ8xbnhDtRQI0lPzzjg\nShZwlcYMbBXY53HOUoGWr5v0ef5fVhmWbYZgf8Beym/MYByPmHy4taqAmEpU3/Rx\nxBEJ6NrkPcGG1JZ54MvN3LBQwZDBzEc1a/kbWzdOGkwen/3CEOsMjlzTFTQr7em2\ne3+RXaHVAgMBAAECggEABWsPREICiArlbh04sXpNkHeQWsjPhnSPHMYAXnkFdNCu\neQeoYGhLikTis8Fk+9uiNvKREwzkrhUG6RBuvAz/Lcu7hDa1ACuU0nH/nU5LeBcC\nDOk6+r6Ug7gn600xeUCTrs/fMOiHFd8hvh172ulrXev8akzI+UiUTN4Q1QGpVLr9\nOeASUWJj+0AXU9lCyBoLWLj5nX6C6+vknGfKctsi0c3rfi89CDeolFm/zY0Mgfrh\nw/R+cCgJF2zEPgXyve9zwr+ciwwM4prpy6JMrXQ7QcEHZDwvoWwgXHRADloeMngx\nTZcksD2TxzRO17DuW+W4aciqondg4Boj/nBRVSBcIQKBgQDLtqmGnx/wYbgAONmp\nYYgzQCJJvLcsEnvV4r0PAFvlaNjH18qr/EfOa3531V6wPr8XWNptq7WZzcxeS2lL\ntKD6GYqkA/slrX3QcWmSKwN9ZKYSlFoxegG1EGBE19EJ9CIEfKX88FX0tuEU8ugF\n07mWQRE1YnTcQMUVDlg71Ms2kQKBgQDLZ0ToMzsiGNRqASbJbkp8DnCJlmwL100j\n02/flz/O6K/NB4rTYZaJ2/CmzK6U26N3TOOgJavrFAOIiIvWfVG/ZOpYOsUZJEQV\nvXqHnMMrcJV3/nMFESuG7c1r42tCkWg9fvqUe4GSjKIsYII5/3xEOWvzohoIC8rJ\nRSrHaL8BBQKBgDBKrQVs03V4tNXYpECzDkaX/YjdY87e0txxU8AqpZ5MrJczYKhE\ntgEJGoHt4vSE62fteFpnSjWbw8bWua9osoCXbXZUO0VDS4AOYqhz6e/f3D6rTHZO\nJfl2WFv5jWR+q1HE+tRrZPUOJW2B5975whUMd7fgDzPnZtEHBYOpfkMBAoGAA3Hu\nUth7SeqNvnXiiErb7Bn6gfoQPmsZHWA5ZtoS9JgwUhKsoUPn3tHg05Jn6pGFxUGC\nIXZB4Stnm+pkI+/fcJRu+6uTJwfcN1oMNzvKenPftDaVECLoT9K7RfaGHIyF7XS3\nHcixux+yp3nC+uR+4FDwqSG3uycn+hy3ysTVZ1kCgYEAgMrha0FmNk6AbeLrVnaQ\n7CKnH0gMMO3ixvD1sY66kldcCkWqnj6lVP/9it2XKhHMWJ7EOSzIiKVInkxP4Uzn\nuEC4TEnsLwJR2/3z1R039dXKcmLMXUbdgwragS72my1O/BwHrWW2k9E/6jRuEt3k\nwg+jKZahT4K8xOoqeUKz6rc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "cmoyaduoc@balmy-geography-403714.iam.gserviceaccount.com",
+  "client_id": "114390625050424961781",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cmoyaduoc%40balmy-geography-403714.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

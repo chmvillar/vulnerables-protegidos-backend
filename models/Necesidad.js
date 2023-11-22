@@ -2,10 +2,32 @@ import mongoose, { mongo } from "mongoose";
 
 const necesidadSchema = mongoose.Schema(
   {
-    nombre: {
+    tipoNecesidad: {
       type: String,
-      trim: true,
       required: true,
+      enum: [
+        "Acceso a Tecnología Educativa",
+        "Acceso a Transporte",
+        "Bienestar Emocional y Mental",
+        "Conectividad Digital",
+        "Cultura y Recreación",
+        "Desarrollo Personal",
+        "Documentación y Legalidad",
+        "Educación",
+        "Empleo y Medios de Vida",
+        "Equidad de Género",
+        "Inclusión Social",
+        "Medio Ambiente",
+        "Participación Cívica",
+        "Protección del Medio Ambiente",
+        "Red de Apoyo Social",
+        "Salud y Seguridad",
+        "Seguridad Alimentaria",
+        "Servicios Básicos",
+        "Sostenibilidad",
+        "Vivienda",
+        "Otros (Especifique en descripción)"
+      ],
     },
     descripcion: {
       type: String,
@@ -34,6 +56,7 @@ const necesidadSchema = mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: "Usuario"
     },
+    imagen: String,
   },
   {
     timestamps: true,
