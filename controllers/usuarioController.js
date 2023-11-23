@@ -24,7 +24,7 @@ const registrar = async (req, res) => {
       token: usuario.token,
     });
 
-    res.json({ msg: "¡Revisa tu correo para confirmar tu cuenta!" });
+    res.json({ msg: "¡Notifique a la persona para confirmar su cuenta!" });
   } catch (error) {
     console.log(error);
   }
